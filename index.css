@@ -18,9 +18,18 @@ ul{
 li{
     list-style-type: none;
     margin: 10px;
+    background-color: #ffefd0;
+    padding: 5px 10px;
 }
-li:hover{
+a:hover{
     color:#FFCF96;
+}
+a{
+    text-decoration: none;
+    color: #DE8F5F;
+}
+button{
+    margin: 5px;
 }
 .login-page {
   width: 360px;
