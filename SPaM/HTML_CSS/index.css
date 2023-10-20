@@ -31,6 +31,15 @@ a{
 button{
     margin: 5px;
 }
+#togglePassword{
+  margin: 10px;
+}
+.password-input{
+  display: flex;
+  align-items: baseline;
+  background-color: #f2f2f2;
+  margin-top: 10px;
+}
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -52,10 +61,15 @@ button{
   background: #f2f2f2;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+}
+.formButton{
+  margin: 0 0 15px;
+}
+#emailButton{
+  margin-top: 10px;
 }
 .form button {
   font-family: "Roboto", sans-serif;
@@ -70,6 +84,7 @@ button{
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  margin-top:15px;
 }
 .form button:hover,.form button:active,.form button:focus {
   background: #DE8F5F;
