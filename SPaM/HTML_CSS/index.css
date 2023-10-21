@@ -28,12 +28,7 @@ a{
     text-decoration: none;
     color: #DE8F5F;
 }
-button{
-    margin: 5px;
-}
-#togglePassword{
-  margin: 10px;
-}
+
 .password-input{
   display: flex;
   align-items: baseline;
@@ -65,11 +60,11 @@ button{
   box-sizing: border-box;
   font-size: 14px;
 }
-.formButton{
-  margin: 0 0 15px;
-}
 #emailButton{
   margin-top: 10px;
+}
+#toggleRegPassword, #toggleLoginPassword{
+  margin-right: 10px;
 }
 .form button {
   font-family: "Roboto", sans-serif;
