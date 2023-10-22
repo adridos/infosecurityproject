@@ -26,23 +26,30 @@
     <div class="login-page">
       <div class="form">
         <form class="login-form">
-          <input class="formButton" type="text" placeholder="username" />
+          <input required class="formButton" type="text" placeholder="username" />
           <div class="password-input">
-            <input type="password" name="password" id="login-password" placeholder="password" />
+            <input required type="password" name="password" id="login-password" placeholder="password" />
             <i class="bi bi-eye-slash" id="toggleLoginPassword"></i>
           </div>
           <button>login</button>
           <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
         <form class="register-form">
-          <input type="text" placeholder="username" />
+          <input required type="text" placeholder="username" />
           <div class="password-input">
-            <input type="password" name="password" id="register-password" placeholder="password" />
+            <input required type="password" name="password" id="register-password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
             <i class="bi bi-eye-slash" id="toggleRegPassword"></i>
           </div>
-          <input id="emailButton" class="formButton" type="text" placeholder="email address" />
+          <input required id="emailButton" class="formButton" type="email" placeholder="email address" />
           <button>Generate a Password</button>
-          <button>create</button>
+          <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">An <b>uppercase</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+          <button disabled>create</button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
         </form>
       </div>
@@ -51,5 +58,6 @@
 </body>
 <script src="../JSFiles/login.js"></script>
 <script src="../JSFiles/passwordVisibility.js"></script>
+<script src="../JSFiles/passwordRequirements.js"></script>
 
 </html>

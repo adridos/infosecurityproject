@@ -66,6 +66,62 @@ a{
 #toggleRegPassword, #toggleLoginPassword{
   margin-right: 10px;
 }
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+h3{
+  font-size: 15px;
+}
+/* Style for the disabled button */
+.register-form button:last-of-type[disabled] {
+  background-color: #ccc; /* Grey background color */
+  color: #666; /* Dark grey text color */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' */
+}
+
+
+/* Style for the enabled button */
+.register-form button:last-of-type:not([disabled]) {
+  background-color: #FFCF96; /* Orange background color */
+  color: white; /* White text color */
+  cursor: pointer; /* Change cursor to 'pointer' */
+}
+.register-form button:last-of-type:hover {
+  background-color: #DE8F5F;
+}
+
+
+#message p {
+  padding: 5px 35px;
+  font-size: 12px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
