@@ -4,7 +4,7 @@ function generateRandomPassword() {
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numberChars = "0123456789";
-    const specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?"; // Add any special characters you want
+    const specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
   
     const charset = lowercaseChars + uppercaseChars + numberChars + specialChars;
     let password = "";
@@ -26,10 +26,16 @@ function generateRandomPassword() {
     return password;
   }
   
-  // Attach the generateRandomPassword function to the "click" event of the "Generate Password" button
-  const generatePasswordButton = document.getElementById("generatePasswordButton");
-  generatePasswordButton.addEventListener("click", function() {
-    const generatedPassword = generateRandomPassword();
-    document.getElementById("register-password").value = generatedPassword;
-  });
-  
+// Attach the validatePassword function to the "click" event of the "Generate Password" button
+const generatePasswordButton = document.getElementById("generatePasswordButton");
+generatePasswordButton.addEventListener("click", function() {
+  const generatedPassword = generateRandomPassword();
+  myInput.value = generatedPassword; // Set the generated password in the input field
+
+  // Simulate the "input" event to trigger the password requirements validation
+  const inputEvent = new Event("input", { bubbles: true });
+  myInput.dispatchEvent(inputEvent);
+
+  validatePassword(generatedPassword); // Validate the generated password
+});
+

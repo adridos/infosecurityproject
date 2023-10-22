@@ -86,17 +86,16 @@ h3{
   cursor: not-allowed; /* Change cursor to 'not-allowed' */
 }
 
+.register-form button:last-of-type:not([disabled]):hover{
+  background-color:#DE8F5F;
+}
 
 /* Style for the enabled button */
 .register-form button:last-of-type:not([disabled]) {
-  background-color: #FFCF96; /* Orange background color */
+  background-color: #FFCF96; 
   color: white; /* White text color */
   cursor: pointer; /* Change cursor to 'pointer' */
 }
-.register-form button:last-of-type:hover {
-  background-color: #DE8F5F;
-}
-
 
 #message p {
   padding: 5px 35px;

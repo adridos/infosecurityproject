@@ -15,7 +15,7 @@ myInput.onblur = function() {
 }
 
 // When the user starts to type something inside the password field
-myInput.onkeyup = function() {
+myInput.oninput = function() {
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {
@@ -73,7 +73,7 @@ function updateCreateButtonState() {
   }
 }
 
-// Attach the updateCreateButtonState function to the "input" event of the password, username, and email input fields
+ //Attach the updateCreateButtonState function to the "input" event of the password, username, and email input fields
 myInput.addEventListener("input", updateCreateButtonState);
 usernameInput.addEventListener("input", updateCreateButtonState);
 emailInput.addEventListener("input", updateCreateButtonState);
