@@ -34,8 +34,12 @@ a{
     text-decoration: none;
     color: var(--darkblue);
 }
-button{
-    margin: 5px;
+
+.password-input{
+  display: flex;
+  align-items: baseline;
+  background-color: #f2f2f2;
+  margin-top: 10px;
 }
 .login-page {
   width: 360px;
@@ -58,11 +62,71 @@ button{
   background: #f2f2f2;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
 }
+#emailButton{
+  margin-top: 10px;
+}
+#toggleRegPassword, #toggleLoginPassword{
+  margin-right: 10px;
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+h3{
+  font-size: 15px;
+}
+/* Style for the disabled button */
+.register-form button:last-of-type[disabled] {
+  background-color: #ccc; /* Grey background color */
+  color: #666; /* Dark grey text color */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' */
+}
+
+.register-form button:last-of-type:not([disabled]):hover{
+  background-color:#DE8F5F;
+}
+
+/* Style for the enabled button */
+.register-form button:last-of-type:not([disabled]) {
+  background-color: #FFCF96; 
+  color: white; /* White text color */
+  cursor: pointer; /* Change cursor to 'pointer' */
+}
+
+#message p {
+  padding: 5px 35px;
+  font-size: 12px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -76,6 +140,7 @@ button{
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  margin-top:15px;
 }
 .form button:hover,.form button:active,.form button:focus {
   background: var(--periwinkle);
