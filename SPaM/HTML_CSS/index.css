@@ -17,15 +17,18 @@ body {
 h1{
     color: var(--tan);
 }
-ul{
-    display: flex;
-    justify-content: center;
+nav{
+  display: flex;
+  justify-content: center;
 }
-li{
-    list-style-type: none;
-    margin: 10px;
-    background-color: var(--darkblue);
-    padding: 5px 10px;
+.siteTitle{
+  list-style-type: none;
+  margin: 10px;
+  background-color: var(--darkblue);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  width: 20%;
 }
 a:hover{
     color: var(--periwinkle);
