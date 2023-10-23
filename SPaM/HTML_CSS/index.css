@@ -56,8 +56,12 @@ a{
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+#passwordMessage{
+  margin: 0;
+  font-size: 13px;
+}
+
 .form input {
-  font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -78,8 +82,9 @@ a{
   background: #f1f1f1;
   color: #000;
   position: relative;
-  padding: 20px;
-  margin-top: 10px;
+  padding-top: 10px;
+  margin: 10px 0 0 0;
+  font-family: arial;
 }
 
 h3{
@@ -93,12 +98,12 @@ h3{
 }
 
 .register-form button:last-of-type:not([disabled]):hover{
-  background-color:#DE8F5F;
+  background-color:var(--periwinkle);
 }
 
 /* Style for the enabled button */
 .register-form button:last-of-type:not([disabled]) {
-  background-color: #FFCF96; 
+  background-color: var(--darkblue); 
   color: white; /* White text color */
   cursor: pointer; /* Change cursor to 'pointer' */
 }
@@ -109,7 +114,7 @@ h3{
 }
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
-  color: green;
+  color: var(--darkblue);
 }
 
 .valid:before {
@@ -119,7 +124,7 @@ h3{
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
 .invalid {
-  color: red;
+  color: var(--red);
 }
 
 .invalid:before {
@@ -128,7 +133,6 @@ h3{
 }
 
 .form button {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: var(--darkblue);
@@ -151,7 +155,7 @@ h3{
   font-size: 12px;
 }
 .form .message a {
-  color: #DE8F5F;
+  color: var(--darkblue);
   text-decoration: none;
 }
 .form .register-form {
