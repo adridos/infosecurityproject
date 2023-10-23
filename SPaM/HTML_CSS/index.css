@@ -1,15 +1,21 @@
-
+:root {
+  --tan: #efe2ba;
+  --darkblue: #4056a1;
+  --red: #f13c20;
+  --mustard: #d79922;
+  --periwinkle: #c5cbe3;
+}
 html{
     margin: 0;
     font-family: monospace;
 }
 body {
-    background-image: url('../images/SPaMBackground.png');
+    background-image: url('../images/BGTwo.png');
     background-size: cover;
   }
   
 h1{
-    color: #DE8F5F;
+    color: var(--tan);
 }
 ul{
     display: flex;
@@ -18,15 +24,15 @@ ul{
 li{
     list-style-type: none;
     margin: 10px;
-    background-color: #ffefd0;
+    background-color: var(--darkblue);
     padding: 5px 10px;
 }
 a:hover{
-    color:#FFCF96;
+    color: var(--periwinkle);
 }
 a{
     text-decoration: none;
-    color: #DE8F5F;
+    color: var(--darkblue);
 }
 button{
     margin: 5px;
@@ -61,7 +67,7 @@ button{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #FFCF96;
+  background: var(--darkblue);
   width: 100%;
   border: 0;
   padding: 15px;
@@ -72,7 +78,7 @@ button{
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #DE8F5F;
+  background: var(--periwinkle);
 }
 .form .message {
   margin: 15px 0 0;
