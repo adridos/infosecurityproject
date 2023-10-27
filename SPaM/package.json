@@ -2,9 +2,9 @@
   "name": "spam",
   "version": "1.0.0",
   "description": "Adriana and Michael's Information Securtiy Project",
-  "main": "index.js",
+  "main": "login.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "login.js"
   },
   "repository": {
     "type": "git",
