@@ -1,5 +1,24 @@
 {
+  "name": "spam",
+  "version": "1.0.0",
+  "description": "Adriana and Michael's Information Securtiy Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon JSFiles/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adridos/infosecurityproject.git"
+  },
+  "author": "AD & MK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adridos/infosecurityproject/issues"
+  },
+  "homepage": "https://github.com/adridos/infosecurityproject#readme",
   "dependencies": {
-    "mongodb": "^6.2.0"
+    "mongodb": "^6.2.0",
+    "nodemon": "^3.0.1"
   }
 }

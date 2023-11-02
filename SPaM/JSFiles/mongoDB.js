@@ -51,11 +51,7 @@ async function connectToMongoDB() {
         const decoder = new TextDecoder();
         return decoder.decode(decryptedData);
     }
-
-    // Read data from a collection
-    const query = { name: 'John' };
-    const foundDocument = await collection.findOne(query);
-    console.log('Found document:', foundDocument);
+    
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
   } finally {
