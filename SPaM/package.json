@@ -1,6 +1,7 @@
 {
   "name": "spam",
   "version": "1.0.0",
+<<<<<<< Updated upstream
   "description": "Adriana and Michael's Information Securtiy Project",
   "main": "index.js",
   "scripts": {
@@ -16,4 +17,24 @@
     "url": "https://github.com/adridos/infosecurityproject/issues"
   },
   "homepage": "https://github.com/adridos/infosecurityproject#readme"
+=======
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "nodemon index.js"
+  },
+  "author": "mike and adriana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mongodb": "^6.2.0"
+  }
+>>>>>>> Stashed changes
 }
