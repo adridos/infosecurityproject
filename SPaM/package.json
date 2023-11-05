@@ -1,23 +1,6 @@
 {
   "name": "spam",
   "version": "1.0.0",
-<<<<<<< Updated upstream
-  "description": "Adriana and Michael's Information Securtiy Project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adridos/infosecurityproject.git"
-  },
-  "author": "AD & MK",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/adridos/infosecurityproject/issues"
-  },
-  "homepage": "https://github.com/adridos/infosecurityproject#readme"
-=======
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -36,5 +19,4 @@
     "mocha": "^10.2.0",
     "mongodb": "^6.2.0"
   }
->>>>>>> Stashed changes
 }
