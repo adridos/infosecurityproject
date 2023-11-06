@@ -37,6 +37,9 @@
       text-decoration: none;
       color: var(--darkblue);
   }
+  .login_btn{
+    color: var(--periwinkle);
+  }
   
   .password-input{
     display: flex;
