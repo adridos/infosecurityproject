@@ -3,6 +3,10 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const port = 8080
 
+//View routers
+const homeRouter = require('./public/views/home')
+const loginRouter = require('./public/views/login')
+
 const app = express()
 
 app.engine('.hbs', exphbs.engine({
@@ -19,9 +23,8 @@ app.listen(port, () =>{
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'public/views'))
 
-//Render's the home.hbs file
-app.get('/', (request, response) => {
-    response.render('home', {
-      name: 'Mike and Adriana'
-    }) 
-  })
+// Use routers
+app.use('/', homeRouter)
+app.use('/', loginRouter)
+
+module.exports = app;

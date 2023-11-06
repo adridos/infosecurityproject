@@ -4,15 +4,9 @@ const router = express.Router();
 // Get login page
 
 router.get('/', (request, response, next) => {
-    response.render('home', {
-        name: 'Mike and Adriana'
+    response.render('login', {
+        name: "Michael or Adriana"
     })
-
-    next
-})
-
-router.post('public/views/login', (request, response) =>{
-    response.redirect('login')
 })
 
 module.exports = router;
