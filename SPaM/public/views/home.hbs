@@ -1,1 +1,32 @@
-<h2>Hello {{name}}<h2></h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello {{name}}</title>
+</head>
+<body>
+    <header>
+        <meta charset="utf-8">
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form action="/login" method="POST", id="login.hbs">
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Sign Up</h2>
+            <form action="/signup" method="POST">
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+</body>
+</html>

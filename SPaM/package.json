@@ -2,10 +2,10 @@
   "name": "spam",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha test",
-    "start": "nodemon index.js"
+    "start": "sh public/scripts/start-app.sh"
   },
   "author": "mike and adriana",
   "license": "ISC",
