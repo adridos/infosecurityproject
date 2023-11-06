@@ -3,10 +3,8 @@ const router = express.Router();
 
 // Get login page
 
-router.get('/', (request, response, next) => {
-    response.render('login', {
-        name: "Michael or Adriana"
-    })
-})
+router.get('/login', (req, res) => {
+    res.render('login'); 
+  });
 
 module.exports = router;

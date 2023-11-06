@@ -20,11 +20,12 @@ app.listen(port, () =>{
     console.log(`Server is running on http://localhost:${port}`)
 })
 
+
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'public/views'))
 
 // Use routers
 app.use('/', homeRouter)
-app.use('/', loginRouter)
+app.use('/login', loginRouter)
 
 module.exports = app;
