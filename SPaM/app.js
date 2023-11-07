@@ -24,6 +24,7 @@ app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'public/views'))
 
 // Use routers
+app.use(express.static(__dirname + '/public'));
 app.use('/', homeRouter)
 app.use('/', loginRouter)
 
