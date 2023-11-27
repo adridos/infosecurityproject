@@ -30,15 +30,10 @@
     justify-content: center;
     width: 20%;
   }
-  a:hover{
-      color: var(--periwinkle);
-  }
+
   a{
       text-decoration: none;
       color: var(--darkblue);
-  }
-  .login_btn{
-    color: var(--periwinkle);
   }
   
   .password-input{
@@ -96,15 +91,23 @@
   h3{
     font-size: 15px;
   }
+  .login-form button:last-of-type[disabled] {
+    background-color: #ccc; /* Grey background color */
+    color: #666; /* Dark grey text color */
+    cursor: not-allowed; /* Change cursor to 'not-allowed' */
+  }
+    /* Style for the enabled button */
+    .login-form button:last-of-type:not([disabled]) {
+      background-color: var(--darkblue); 
+      color: white; /* White text color */
+      cursor: pointer; /* Change cursor to 'pointer' */
+    }
+
   /* Style for the disabled button */
   .register-form button:last-of-type[disabled] {
     background-color: #ccc; /* Grey background color */
     color: #666; /* Dark grey text color */
     cursor: not-allowed; /* Change cursor to 'not-allowed' */
-  }
-  
-  .register-form button:last-of-type:not([disabled]):hover{
-    background-color:var(--periwinkle);
   }
   
   /* Style for the enabled button */
@@ -141,7 +144,7 @@
   .form button {
     text-transform: uppercase;
     outline: 0;
-    background: var(--darkblue);
+    background: var(--darkblue); 
     width: 100%;
     border: 0;
     padding: 15px;
@@ -152,9 +155,8 @@
     cursor: pointer;
     margin-top:15px;
   }
-  .form button:hover,.form button:active,.form button:focus {
-    background: var(--periwinkle);
-  }
+  
+ 
   .form .message {
     margin: 15px 0 0;
     color: #b3b3b3;
