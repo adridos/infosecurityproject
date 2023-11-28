@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 const exphbs  = require('express-handlebars');
 const port = 8080;
-const { MongoClient, ObjectId } = require('mongodb');
 
 // View routers
 const homeRouter = require("./public/views/home");
@@ -24,7 +23,6 @@ app.set("views", path.join(__dirname, "public/views"));
 app.use(express.static(__dirname + "/public"));
 app.use("/", homeRouter);
 app.use("/", loginRouter);
-
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
