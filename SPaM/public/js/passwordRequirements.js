@@ -4,6 +4,13 @@ var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 
+var createAccountButton = document.querySelector(".register-form button:last-of-type");
+var usernameInput = document.querySelector(".register-form input[type='text'][placeholder='username']");
+var emailInput = document.querySelector(".register-form input[type='email'][placeholder='email address']");
+var usernameLoginInput = document.getElementById("login-username");
+var passwordLoginInput = document.getElementById("login-password");
+var loginButton = document.getElementById("loginButton");
+
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
   document.getElementById("message").style.display = "block";
@@ -57,9 +64,6 @@ myInput.oninput = function() {
 }
 
 //disable create account button unless the requirements are met!
-var createAccountButton = document.querySelector(".register-form button:last-of-type");
-var usernameInput = document.querySelector(".register-form input[type='text'][placeholder='username']");
-var emailInput = document.querySelector(".register-form input[type='email'][placeholder='email address']");
 
 function updateCreateButtonState() {
   var passwordValid = letter.classList.contains("valid") && capital.classList.contains("valid") && number.classList.contains("valid") && length.classList.contains("valid");
@@ -77,3 +81,22 @@ function updateCreateButtonState() {
 myInput.addEventListener("input", updateCreateButtonState);
 usernameInput.addEventListener("input", updateCreateButtonState);
 emailInput.addEventListener("input", updateCreateButtonState);
+
+
+
+//disable/enable the login button
+
+function updateLoginButtonState() {
+  var usernameFilled = usernameLoginInput.value.trim() !== "";
+  var passwordFilled = passwordLoginInput.value.trim() !== "";
+
+  if (usernameFilled && passwordFilled) {
+    loginButton.removeAttribute("disabled");
+  } else {
+    loginButton.setAttribute("disabled", "true");
+  }
+}
+
+// Attach the updateLoginButtonState function to the "input" event of the username and password input fields
+usernameLoginInput.addEventListener("input", updateLoginButtonState);
+passwordLoginInput.addEventListener("input", updateLoginButtonState);
