@@ -42,8 +42,8 @@
               <a href="#">Create an account</a></p>
           </form>
 
-          <form class="register-form">
-            <input required type="text" placeholder="username" />
+          <form action="/signup" method="post" class="register-form">
+            <input required type="text" placeholder="username" name="username"/>
             <div class="password-input">
               <input
                 required
@@ -57,10 +57,11 @@
             </div>
             <input
               required
-              id="emailButton"
+              id="phoneInput"
               class="formButton"
-              type="email"
-              placeholder="email address"
+              type="tel"
+              name ="phone"
+              placeholder="phone number"
             />
             <button id="generatePasswordButton">Generate a Password</button>
             <div id="message">
@@ -70,7 +71,7 @@
               <p id="number" class="invalid">A <b>number</b></p>
               <p id="length" class="invalid">Minimum <b>8 characters</b></p>
             </div>
-            <button disabled id="createButton">create</button>
+            <input  class="submitButton" id="createButton" type="submit" onclick="submitForm()"></input>
             <p class="message">Already registered? <a href="#">Sign In</a></p>
           </form>
         </div>
