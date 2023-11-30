@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-userName = 'mkleindl';
+const userName = '';
 
 async function main(){
 

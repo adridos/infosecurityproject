@@ -5,8 +5,8 @@ const crypto = require('crypto');
 const generateKey = () => crypto.randomBytes(32);
 const key = generateKey();
 
-userName = 'el jefe';
-pw = 'mynameisjeff';
+const userName = '';
+const pw = '';
 
 
 async function main(){
