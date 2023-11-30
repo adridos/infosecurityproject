@@ -1,3 +1,4 @@
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 async function main(){
@@ -6,7 +7,6 @@ async function main(){
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
     const uri = "mongodb+srv://spamadmin:spamadmin@cluster0.mfau0rr.mongodb.net/";
-
 
     const client = new MongoClient(uri);
 
@@ -25,10 +25,10 @@ async function main(){
 }
 
 async function listDatabases(client){
+
     databasesList = await client.db().admin().listDatabases();
 
     console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
 
 main().catch(console.error);
