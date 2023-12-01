@@ -5,10 +5,6 @@ const crypto = require('crypto');
 const generateKey = () => crypto.randomBytes(32);
 const key = generateKey();
 
-const userName = '';
-const pw = '';
-
-
 async function main(){
 
     const uri = "mongodb+srv://spamadmin:spamadmin@cluster0.mfau0rr.mongodb.net/";
@@ -57,3 +53,7 @@ async function encrypt (pass, key) {
 }
 
 main().catch(console.error);
+
+module.exports = {
+    insertUser,
+};
